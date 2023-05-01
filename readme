@@ -1,0 +1,60 @@
+Vehicle Booking System API
+This is a RESTful API for a vehicle booking system, built using Node.js, Express.js, and MongoDB.
+
+Prerequisites
+Node.js v12 or higher
+MongoDB v4 or higher
+Installation
+Clone the repository
+Run npm install to install dependencies
+Create a .env file in the root directory and add the following environment variables:
+
+
+makefile
+MONGODB_URI=<your-mongodb-uri>
+PORT=<port-number>
+
+
+Run npm run dev to start the development server
+API Endpoints
+Seed API:
+POST /api/seed
+
+This API will be used to seed the initial set of values into the database.
+
+Vehicle Types API:
+GET /api/vehicle-types
+
+This API will be used to get a list of all available vehicle types.
+
+Vehicles API:
+GET /api/vehicles?vehicle_type=<vehicle_type>
+
+This API will be used to get a list of all vehicles of a specific type.
+
+Booking API:
+POST /api/bookings
+
+This API will be used to submit the booking information for a vehicle.
+
+Availability API:
+GET /api/availability?vehicle_type=<vehicle_type>&start_date=<start_date>&end_date=<end_date>
+
+This API will be used to check the availability of a vehicle type between a specific start and end date.
+
+Booking History API:
+GET /api/bookings?user_id=<user_id>
+
+This API will be used to get the booking history of a specific user.
+
+Error Handling
+The API returns appropriate HTTP status codes and JSON-formatted error messages for various error scenarios.
+
+Testing
+The API can be tested using Postman or any other API testing tool.
+
+Contributing
+Contributions to this project are welcome. Before submitting a pull request, please ensure that your changes pass the linting and testing checks.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for more information.
